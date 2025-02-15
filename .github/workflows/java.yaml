@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          # ref: ${{ github.event.pull_request.head.ref }}
+          ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: ${{ env.PR_FETCH_DEPTH }}
 
       - name: Set up JDK
@@ -26,6 +26,6 @@ jobs:
 
       - name: Compile Java
         run: |
-          cd itcs472_my_playground/HolidayTravelVehicles 
+          cd HolidayTravelVehicles 
           javac -d . *.java
         # Compile java file from directory
